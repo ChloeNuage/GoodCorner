@@ -85,7 +85,7 @@ const AdDetails = () => {
           </div>
           <a
             href="mailto:serge@serge.com"
-            className="button button-primary link-button"
+            className="button-email"
           >
             <svg
               aria-hidden="true"
@@ -102,7 +102,7 @@ const AdDetails = () => {
             </svg>
             Envoyer un email
           </a>
-          <button className="button" onClick={() => deleteAd(adData.id)}>
+          <button className="button-delete" onClick={() => deleteAd(adData.id)}>
             Supprimer l'annonce
           </button>
         </div>

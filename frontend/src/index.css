@@ -31,6 +31,7 @@ h2 {
   color:#084734;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 0;
 }
  
 .header {
@@ -117,7 +118,15 @@ h2 {
   font: Helvetica;
   font-weight: bold;
   color: #CEF17B;
+  padding-left: 1% !important;
 }
+
+.main-search-field::placeholder {
+  font: Helvetica;
+  font-weight: lighter;
+  color: #CEF17B;
+}
+
  
 .text-field {
   height: 40px;
@@ -151,6 +160,7 @@ h2 {
 }
  
 .recent-ads {
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap; /* Permet le retour à la ligne */
   justify-content: center; /* Centre les ads horizontalement */
@@ -251,7 +261,9 @@ h3 {
   font-weight: bold;
   max-width: 170px;
 }
- 
+
+/* AD DETAILS */
+
 .ad-details-image-container {
   margin-inline-start: -24px;
   margin-inline-end: -24px;
@@ -294,10 +306,16 @@ h3 {
   display: grid;
   gap: 12px;
   align-content: baseline;
+  color: #084734;
+  font-size: 20px;
+  font-family: Helvetica;
+  margin-top: auto;
+  margin-bottom: auto;
 }
  
 .ad-details-price {
   font-weight: bold;
+  font-size: 26px;
 }
  
 .separator {
@@ -307,6 +325,48 @@ h3 {
   border: none;
 }
 
+.ad-details-owner {
+  margin-bottom: 10%;
+}
+
+.button-email {
+  margin-right: 1%;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #CEF17B;
+  background-color: #084734;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-delete{
+  margin-right: 1%;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #CEF17B;
+  color: #084734;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(55, 67, 117,0.1);
+}
+
+
 /* NEw add */
 
 
@@ -315,9 +375,14 @@ h3 {
   font-weight: bold;
   color: #084734;
   font-family: Helvetica;
-  
 }
 
+.text-field-new-ad::placeholder {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #084734;
+  font-family: Helvetica;
+}
 
 .new-content-form {
   display: flex;
@@ -344,6 +409,7 @@ h3 {
   font-family: inherit;
   margin-top: 10%;
 }
+
 .category-title {
   font-size: 20px;
   font-weight: bold;
@@ -357,11 +423,11 @@ h3 {
   height: 40px;
   width: 300px;
   background-color: #CDEDB3;
-  padding: 8px 8px;
+  padding: auto;
   border: 3px solid #084734;
   border-radius: 15px;
-  font-size: 15px;
-  font-family: inherit; 
+  font-size: 17px;
+  font-family: Helvetica; 
   margin-bottom: 8%;
   margin-top: 10%;
   display: flex;

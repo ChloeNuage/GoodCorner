@@ -6,7 +6,7 @@ type AdCardProps = Omit<Ad, "id">;
 const AdCard = ({title, pictureUrl, price, link }: AdCardProps) => {
     return (
         <div className="ad-card-container">
-            <Link className="ad-card-link" to={link}>
+            <Link className="ad-card-link" to={"/ad/"+link}>
                 <div className="ad-card-image"> 
                     <img src={pictureUrl} alt={title}/>
                 </div>

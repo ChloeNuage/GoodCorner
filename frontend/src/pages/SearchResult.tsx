@@ -8,13 +8,12 @@ const SearchResult = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query");
 
-  const [total, setTotal] = useState(0);
   const [ads, setAds] = useState<Ad[]>([]);
 
   const fetchAds = async () => {
     try {
       const result = await axios.get(
-        `${import.meta.env.VITE_API_URL}/ads?search=${query}`
+        `${import.meta.env.VITE_API_URL}/ads/search/${query}`
       );
       setAds(result.data);
     } catch (error) {
@@ -28,8 +27,7 @@ const SearchResult = () => {
 
   return (
     <>
-      <h2>Résultat de recherche</h2>
-      <h3>Total: {total} €</h3>
+      <h2>Recherche</h2>
 
       <section className="recent-ads">
         {ads.map((ad) => (
@@ -40,12 +38,6 @@ const SearchResult = () => {
               price={ad.price}
               link={`${import.meta.env.VITE_FRONT_URL}/ad/${ad.id}`}
             />
-            <button
-              className="button"
-              onClick={() => setTotal(total + ad.price)}
-            >
-              Add price to total
-            </button>
           </div>
         ))}
       </section>

@@ -62,7 +62,7 @@ const AdsByCategory = function () {
                             title={ad.title}
                             pictureUrl={ad.pictureUrl}
                             price={ad.price}
-                            link={ad.link}
+                            link={ad.id.toString()}
                         />
                     </div>
                 ))}

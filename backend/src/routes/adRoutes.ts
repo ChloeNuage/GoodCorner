@@ -7,6 +7,8 @@ const router = Router();
 // GET
 router.get("/", adController.getAll);
 
+router.get("/search/:query", adController.getFilteredAds)
+
 // Get by category
 router.get("/category/:id", adController.getByCategory);
 
