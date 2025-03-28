@@ -1,19 +1,20 @@
-import { BaseEntity, Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import Ad from "./Ad";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { Ad } from "./Ad";
 
-@Entity()
-class Tag extends BaseEntity {
+@Entity("Tag")
+export class Tag extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  name: string;
-
-  @OneToMany(() => Ad, (ad) => ad.category)
-  ads: Ad[];
+  label!: string;
 
   @ManyToMany(() => Ad, (ad) => ad.tags)
-  ad: Ad[];
-} 
-
-export default Tag;
+  ads!: Ad[];
+}
